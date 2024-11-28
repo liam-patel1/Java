@@ -55,7 +55,26 @@ class Main {
         int[] allStudentIDs = {0, 1, 2, 3, 4, 5};
         Random rand = new Random();
         ExpeditionMember[] members = new ExpeditionMember[rand.nextInt(3)+4];
-        System.out.println(members.length);
+        for(int i = 0; i < members.length ; i++) {
+               members[i] = new ExpeditionMember();
+               members[i].set_name(allNames[i]);
+               members[i].set_id(allStudentIDs[i]);
+        }
+
+        ResearchExpedition pyramidExpedition = new ResearchExpedition(members[0], members[1], members[2]);
+        ResearchExpedition nileExpedition = new ResearchExpedition(members[members.length-3], members[members.length-2], members[members.length-1]);
+
+        System.out.println(pyramidExpedition.getExpeditionLeaderName());
+        System.out.println(pyramidExpedition.getArchivistName());
+        System.out.println(pyramidExpedition.getFieldResearcherName());
+        System.out.println(nileExpedition.getExpeditionLeaderName());
+        System.out.println(nileExpedition.getArchivistName());
+        System.out.println(nileExpedition.getFieldResearcherName());
+
+        if (members.length == ExpeditionMember.member_counter) {
+            System.out.println("SUCCESS");
+        }
+
         
 
     }
