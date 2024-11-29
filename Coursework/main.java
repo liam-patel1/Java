@@ -25,9 +25,9 @@ class ExpeditionMember {
 }
 
 class ResearchExpedition {
-    ExpeditionMember expeditionLeader;
-    ExpeditionMember archivist;
-    ExpeditionMember fieldResearcher;
+    private ExpeditionMember expeditionLeader;
+    private ExpeditionMember archivist;
+    private ExpeditionMember fieldResearcher;
 
     ResearchExpedition(ExpeditionMember newexpeditionLeader, ExpeditionMember newarchivist, ExpeditionMember newfieldResearcher) {
         expeditionLeader = newexpeditionLeader;
@@ -47,10 +47,8 @@ class ResearchExpedition {
 }
 
 
-
-
 class Main {
-    void main() {
+    public static void main(String[] args) {
         String[] allNames = {"Liam", "John", "Jack", "Tom", "Jeff", "Eric"};
         int[] allStudentIDs = {0, 1, 2, 3, 4, 5};
         Random rand = new Random();
